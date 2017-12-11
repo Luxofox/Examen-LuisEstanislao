@@ -10,15 +10,17 @@
 
 	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet">
 	<link href="assets/css/styles.css" rel="stylesheet">
-	<script src="assets/js/scriptlogin.js>"></script>
-
+	<link href="assets/css/reset.css" rel="stylesheet"> 
+	<link href="assets/css/style.css" rel="stylesheet" > 
+	<script src="assets/js/modernizr.js>"></script>
+	
 
 </head>
 
 
 <body>
 	<div>
-		<header class="compact">
+		<header role="banner" class="compact">
 			<h2 class="tzine">
 
 			</h2>
@@ -28,117 +30,105 @@
 		</header>
 
 		<div class="main-content">
-			<nav>
-				<ul>
-					<li>
-						<a href="#">Este es el nav bar</a>
-					</li>
-				</ul>
-			</nav>
+				<nav class="main-nav">
+						<ul>
+							<!-- inser more links here -->
+							<li><a class="cd-signin" href="#0">Sign in</a></li>
+							<li><a class="cd-signup" href="#0">Sign up</a></li>
+						</ul>
+					</nav>
 
-			<!-- Login
+					<div class="cd-user-modal"> <!-- this is the entire modal form, including the background -->
+						<div class="cd-user-modal-container"> <!-- this is the container wrapper -->
+							<ul class="cd-switcher">
+								<li><a href="#0">Sign in</a></li>
+								<li><a href="#0">New account</a></li>
+							</ul>
+				
+							<div id="cd-login"> <!-- log in form -->
+								<form class="cd-form">
+									<p class="fieldset">
+										<label class="image-replace cd-email" for="signin-email">E-mail</label>
+										<input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="E-mail">
+										<span class="cd-error-message">Error message here!</span>
+									</p>
+				
+									<p class="fieldset">
+										<label class="image-replace cd-password" for="signin-password">Password</label>
+										<input class="full-width has-padding has-border" id="signin-password" type="text"  placeholder="Password">
+										<a href="#0" class="hide-password">Hide</a>
+										<span class="cd-error-message">Error message here!</span>
+									</p>
+				
+									<p class="fieldset">
+										<input type="checkbox" id="remember-me" checked>
+										<label for="remember-me">Remember me</label>
+									</p>
+				
+									<p class="fieldset">
+										<input class="full-width" type="submit" value="Login">
+									</p>
+								</form>
+								
+								<p class="cd-form-bottom-message"><a href="#0">Forgot your password?</a></p>
+								<!-- <a href="#0" class="cd-close-form">Close</a> -->
+							</div> <!-- cd-login -->
+				
+							<div id="cd-signup"> <!-- sign up form -->
+								<form class="cd-form">
+									<p class="fieldset">
+										<label class="image-replace cd-username" for="signup-username">Username</label>
+										<input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Username">
+										<span class="cd-error-message">Error message here!</span>
+									</p>
+				
+									<p class="fieldset">
+										<label class="image-replace cd-email" for="signup-email">E-mail</label>
+										<input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="E-mail">
+										<span class="cd-error-message">Error message here!</span>
+									</p>
+				
+									<p class="fieldset">
+										<label class="image-replace cd-password" for="signup-password">Password</label>
+										<input class="full-width has-padding has-border" id="signup-password" type="text"  placeholder="Password">
+										<a href="#0" class="hide-password">Hide</a>
+										<span class="cd-error-message">Error message here!</span>
+									</p>
+				
+									<p class="fieldset">
+										<input type="checkbox" id="accept-terms">
+										<label for="accept-terms">I agree to the <a href="#0">Terms</a></label>
+									</p>
+				
+									<p class="fieldset">
+										<input class="full-width has-padding" type="submit" value="Create account">
+									</p>
+								</form>
+				
+								<!-- <a href="#0" class="cd-close-form">Close</a> -->
+							</div> <!-- cd-signup -->
+				
+							<div id="cd-reset-password"> <!-- reset password form -->
+								<p class="cd-form-message">Lost your password? Please enter your email address. You will receive a link to create a new password.</p>
+				
+								<form class="cd-form">
+									<p class="fieldset">
+										<label class="image-replace cd-email" for="reset-email">E-mail</label>
+										<input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="E-mail">
+										<span class="cd-error-message">Error message here!</span>
+									</p>
+				
+									<p class="fieldset">
+										<input class="full-width has-padding" type="submit" value="Reset password">
+									</p>
+								</form>
+				
+								<p class="cd-form-bottom-message"><a href="#0">Back to log-in</a></p>
+							</div> <!-- cd-reset-password -->
+							<a href="#0" class="cd-close-form">Close</a>
+						</div> <!-- cd-user-modal-container -->
+					</div> 
 
-			<div class="container">
-				<a href="#modal" class="btn">Login</a>
-				<div id="modal" class="popupContainer" style="display:none;">
-					<header class="popupHeader">
-						<span class="header_title">Login</span>
-						<span class="modal_close">
-							<i class="fa fa-times"></i>
-						</span>
-					</header>
-
-					<section class="popupBody">
-
-						<div class="action_btns">
-							<div class="one_half">
-								<a href="#" id="login_form" class="btn">Login</a>
-							</div>
-							<div class="one_half last">
-								<a href="#" id="register_form" class="btn">Registrarse</a>
-							</div>
-						</div>
-				</div>
-
-				<div class="user_login">
-					<form>
-						<label>Email / Username</label>
-						<input type="text" />
-						<br />
-
-						<label>Password</label>
-						<input type="password" />
-						<br />
-
-						<div class="checkbox">
-							<input id="remember" type="checkbox" />
-							<label for="remember">Recordarme</label>
-						</div>
-
-						<div class="action_btns">
-							<div class="one_half">
-								<a href="#" class="btn back_btn">
-									<i class="fa fa-angle-double-left"></i> Volver</a>
-							</div>
-							<div class="one_half last">
-								<a href="#" class="btn btn_red">Login</a>
-							</div>
-						</div>
-					</form>
-
-					<a href="#" class="forgot_password">Forgot password?</a>
-				</div>
-
-				<div class="user_register">
-					<form>
-						<label>Nombre completo</label>
-						<input type="text" />
-						<br />
-
-						<label>Email</label>
-						<input type="email" />
-						<br />
-
-						<label>Contraseña</label>
-						<input type="password" />
-						<br />
-
-						<div class="action_btns">
-							<div class="one_half">
-								<a href="#" class="btn back_btn">
-									<i class="fa fa-angle-double-left"></i> Volver</a>
-							</div>
-							<div class="one_half last">
-								<a href="#" class="btn btn_red">Registrar</a>
-							</div>
-						</div>
-					</form>
-				</div>
-				</section>
-			</div>
-		</div>
-
- -->
-
-
- <section>
-		<h1>Login Form</h1>
-		<form>
-		  <div>
-			<label for="user">Username: </label>
-			<input type="text" name="user" id="user" />
-		  </div>
-		  <div>
-			<label for="pass">Password: </label>
-			<input type="pass" name="pass" id="pass" />
-		  </div>
-		  <div>
-			<input type="button" id="login" name="login" value="Login" />
-		  </div>
-		</form>
-		<div id="message"></div>
-	  </section>
-	  
 
 
 
@@ -185,7 +175,7 @@
 							</ul>
 							<button>Comprar</button>
 							<p class="product-price">{{price}}$</p>
-							<div class="highlight"></div>
+							<!-- <div class="highlight"></div> -->
 						</li>
 					{{/each}}
 				</script>
@@ -212,14 +202,14 @@
 		</div>
 
 	</div>
+	</div>
 
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
 	<script src="assets/js/script.js"></script>
+	<script src="assets/js/main.js"></script>
 
-
-	</div>
 </body>
 <footer>
 	<p id="final">Copyright &copy; 2017, Luis.E</p>
