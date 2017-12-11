@@ -11,9 +11,9 @@ $(function () {
 		var that = $(this),
 			specName = that.attr('name');
 
-		if(that.is(":checked")) {
+		if (that.is(":checked")) {
 
-			if(!(filters[specName] && filters[specName].length)){
+			if (!(filters[specName] && filters[specName].length)) {
 				filters[specName] = [];
 			}
 
@@ -22,15 +22,15 @@ $(function () {
 
 		}
 
-		if(!that.is(":checked")) {
+		if (!that.is(":checked")) {
 
-			if(filters[specName] && filters[specName].length && (filters[specName].indexOf(that.val()) != -1)){
+			if (filters[specName] && filters[specName].length && (filters[specName].indexOf(that.val()) != -1)) {
 
 				var index = filters[specName].indexOf(that.val());
 
 				filters[specName].splice(index, 1);
 
-				if(!filters[specName].length){
+				if (!filters[specName].length) {
 					delete filters[specName];
 				}
 
@@ -61,7 +61,7 @@ $(function () {
 
 	});
 
-	$.getJSON( "products.json", function( data ) {
+	$.getJSON("products.json", function (data) {
 
 		products = data;
 
@@ -70,7 +70,7 @@ $(function () {
 		$(window).trigger('hashchange');
 	});
 
-	$(window).on('hashchange', function(){
+	$(window).on('hashchange', function () {
 		render(decodeURI(window.location.hash));
 	});
 
@@ -80,28 +80,28 @@ $(function () {
 		$('.main-content .page').removeClass('visible');
 
 
-		var	map = {
-			'': function() {
+		var map = {
+			'': function () {
 
 				filters = {};
-				checkboxes.prop('checked',false);
+				checkboxes.prop('checked', false);
 				renderProductsPage(products);
 			},
 
-			'#product': function() {
+			'#product': function () {
 
 				var index = url.split('#product/')[1].trim();
 				renderSingleProductPage(index, products);
 			},
 
-			'#filter': function() {
+			'#filter': function () {
 
 				url = url.split('#filter/')[1].trim();
 
 				try {
 					filters = JSON.parse(url);
 				}
-				catch(err) {
+				catch (err) {
 					window.location.hash = '#';
 					return;
 				}
@@ -111,7 +111,7 @@ $(function () {
 
 		};
 
-		if(map[temp]){
+		if (map[temp]) {
 			map[temp]();
 		}
 		else {
@@ -120,13 +120,13 @@ $(function () {
 
 	}
 
-	function generateAllProductsHTML(data){
+	function generateAllProductsHTML(data) {
 
 		var list = $('.all-products .products-list');
 
 		var theTemplateScript = $("#products-template").html();
-		var theTemplate = Handlebars.compile (theTemplateScript);
-		list.append (theTemplate(data));
+		var theTemplate = Handlebars.compile(theTemplateScript);
+		list.append(theTemplate(data));
 
 		list.find('li').on('click', function (e) {
 			e.preventDefault();
@@ -137,7 +137,7 @@ $(function () {
 		})
 	}
 
-	function renderProductsPage(data){
+	function renderProductsPage(data) {
 
 		var page = $('.all-products'),
 			allProducts = $('.all-products .products-list > li');
@@ -149,7 +149,7 @@ $(function () {
 			var that = $(this);
 
 			data.forEach(function (item) {
-				if(that.data('index') == item.id){
+				if (that.data('index') == item.id) {
 					that.removeClass('hidden');
 				}
 			});
@@ -158,14 +158,14 @@ $(function () {
 
 	}
 
-	function renderSingleProductPage(index, data){
+	function renderSingleProductPage(index, data) {
 
 		var page = $('.single-product'),
 			container = $('.preview-large');
 
-		if(data.length){
+		if (data.length) {
 			data.forEach(function (item) {
-				if(item.id == index){
+				if (item.id == index) {
 
 					container.find('h3').text(item.name);
 					container.find('img').attr('src', item.image.large);
@@ -178,9 +178,9 @@ $(function () {
 
 	}
 
-	function renderFilterResults(filters, products){
+	function renderFilterResults(filters, products) {
 
-		var criteria = ['comida','equipo'],
+		var criteria = ['comida', 'equipo'],
 			results = [],
 			isFiltered = false;
 
@@ -189,26 +189,26 @@ $(function () {
 
 		criteria.forEach(function (c) {
 
-			if(filters[c] && filters[c].length){
+			if (filters[c] && filters[c].length) {
 
-				if(isFiltered){
+				if (isFiltered) {
 					products = results;
 					results = [];
 				}
 
 				filters[c].forEach(function (filter) {
 
-					products.forEach(function (item){
+					products.forEach(function (item) {
 
-						if(typeof item.specs[c] == 'number'){
-							if(item.specs[c] == filter){
+						if (typeof item.specs[c] == 'number') {
+							if (item.specs[c] == filter) {
 								results.push(item);
 								isFiltered = true;
 							}
 						}
 
-						if(typeof item.specs[c] == 'string'){
-							if(item.specs[c].toLowerCase().indexOf(filter) != -1){
+						if (typeof item.specs[c] == 'string') {
+							if (item.specs[c].toLowerCase().indexOf(filter) != -1) {
 								results.push(item);
 								isFiltered = true;
 							}
@@ -216,8 +216,8 @@ $(function () {
 
 					});
 
-					if(c && filter){
-						$('input[name='+c+'][value='+filter+']').prop('checked',true);
+					if (c && filter) {
+						$('input[name=' + c + '][value=' + filter + ']').prop('checked', true);
 					}
 				});
 			}
@@ -227,18 +227,18 @@ $(function () {
 		renderProductsPage(results);
 	}
 
-	function renderErrorPage(){
+	function renderErrorPage() {
 		var page = $('.error');
 		page.addClass('visible');
 	}
 
-	function createQueryHash(filters){
+	function createQueryHash(filters) {
 
-		if(!$.isEmptyObject(filters)){
+		if (!$.isEmptyObject(filters)) {
 
 			window.location.hash = '#filter/' + JSON.stringify(filters);
 		}
-		else{
+		else {
 
 			window.location.hash = '#';
 		}

@@ -14,36 +14,49 @@
 <body>
 
 	<header class="compact">
-		<h2 class="tzine"><a href="">Login</a></h2>
-		<h1><a href="#">Empresa Latias S.A</a></h1>
+		<h2 class="tzine">
+			<a href="">Login</a>
+		</h2>
+		<h1 id="top">
+			<a href="#">Empresa Latias S.A</a>
+		</h1>
 	</header>
+<nav>
+	<ul>
+		<li><a href="top"/>Top</a></li>
 
+	</ul>
+</nav>
 	<div class="main-content">
 
-		<div class="all-products page">
 
-			<div class="filters">
-				<form>
+		<section>
+			<div class="all-products page">
 
-					<div class="filter-criteria">
-						<span>Comida</span>
-						<label><input type="checkbox" name="comida" value="apple">Apple</label>
-						
-					</div>
+				<div class="filters">
+					<form>
 
-					<div class="filter-criteria">
-						<span>Equipo</span>
-						<label><input type="checkbox" value="16" name="equipo">16 GB</label>
-						
-					</div>
-					<button>Limpiar filtros</button>
+						<div class="filter-criteria">
+							<span>Comida</span>
+							<label>
+								<input type="checkbox" name="comida" value="comida">Comida</label>
 
-				</form>
+						</div>
 
-			</div>
+						<div class="filter-criteria">
+							<span>Equipo</span>
+							<label>
+								<input type="checkbox" value="equipo" name="equipo">Equipo</label>
 
-			<ul class="products-list">
-				<script id="products-template" type="x-handlebars-template">​
+						</div>
+						<button>Limpiar filtros</button>
+
+					</form>
+
+				</div>
+
+				<ul class="products-list">
+					<script id="products-template" type="x-handlebars-template">​
 					{{#each this}}
 						<li data-index="{{id}}">
 							<a href="#" class="product-photo"><img src="{{image.small}}" height="130" alt="{{name}}"/></a>
@@ -57,11 +70,12 @@
 							<div class="highlight"></div>
 						</li>
 					{{/each}}
-				</script> 
-			</ul>
+				</script>
 
-		</div>
+				</ul>
 
+			</div>
+		</section>
 
 		<div class="single-product page">
 
@@ -69,7 +83,7 @@
 
 			<div class="preview-large">
 				<h3>Producto</h3>
-				<img src=""/>
+				<img src="" />
 				<p></p>
 
 				<span class="close">×</span>
@@ -90,4 +104,5 @@
 
 
 </body>
+
 </html>
