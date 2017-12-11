@@ -111,5 +111,13 @@
       "small": "assets/images/whiskas.png",
       "large": "assets/images/whiskas.png"
     }
-  }
+  },
+  {
+    "users": [{
+      "name": "administrador",
+      "password": "admin"
+    }, {
+      
+    }]
+   }
 ]

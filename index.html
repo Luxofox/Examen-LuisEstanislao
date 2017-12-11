@@ -14,62 +14,62 @@
 
 
 <body>
-<div> 
-	<header class="compact">
-		<h2 class="tzine">
-			<a href="">Login</a>
-		</h2>
-		<h1>
-			<a href="#">Empresa Latias S.A</a>
-		</h1>
-	</header>
-	
-	<nav>
-			<ul>
-				<li><a href=https://git-scm.com/>GIT</a></li>
-				<li><a href=https://bitbucket.org/>BitBucket</a></li>
-				<li><a href=https://www.atlassian.com/software/bamboo>Bamboo</a></li>
-				<li><a href=https://maven.apache.org/>Maven</a></li>
-				<li><a href=https://www.heroku.com/>Heroku</a></li>			
-			</ul>
-		</nav>
-<!--  
-<nav>
-	<ul>
-		<li><a href="#top">Ir al principio de la pagina</a></li>
-	</ul>
-</nav>
- -->
-	<div class="main-content">
+	<div>
+		<header class="compact">
+			<h2 class="tzine">
+				<div id="login"><a href="#">Login</a></div>
+			</h2>
+			<h1>
+				<a href="#">Empresa Latias S.A</a>
+			</h1>
+		</header>
+
+		<div id="logininfo">
+			<p> comprobando que funciona login.</p>
+
+		</div>
 
 
-		<section>
-			<div class="all-products page">
+		<div class="main-content">
+			<nav>
+				<ul>
+					<li>
+						<a href="#top">Ir al principio de la pagina</a>
+					</li>
+				</ul>
+			</nav>
 
-				<div class="filters">
-					<form>
+			<section>
+				<div class="all-products page">
 
-						<div class="filter-criteria">
-							<span>Comida</span>
-							<label>
-								<input type="checkbox" name="comida" value="comida">Comida</label>
 
-						</div>
 
-						<div class="filter-criteria">
-							<span>Equipo</span>
-							<label>
-								<input type="checkbox" value="equipo" name="equipo">Equipo</label>
 
-						</div>
-						<button>Limpiar filtros</button>
+					<div class="filters">
+						<form>
 
-					</form>
+							<div class="filter-criteria">
+								<span>Comida</span>
+								<label>
+									<input type="checkbox" name="comida" value="comida">Comida</label>
 
-				</div>
+							</div>
 
-				<ul class="products-list">
-					<script id="products-template" type="x-handlebars-template">​
+							<div class="filter-criteria">
+								<span>Equipo</span>
+								<label>
+									<input type="checkbox" value="equipo" name="equipo">Equipo</label>
+
+							</div>
+							<button>Limpiar filtros</button>
+
+						</form>
+
+					</div>
+
+					<main>
+						<ul class="products-list">
+							<script id="products-template" type="x-handlebars-template">​
 					{{#each this}}
 						<li data-index="{{id}}">
 							<a href="#" class="product-photo"><img src="{{image.small}}" height="130" alt="{{name}}"/></a>
@@ -84,38 +84,49 @@
 						</li>
 					{{/each}}
 				</script>
+					</main>
+					</ul>
 
-				</ul>
+				</div>
+			</section>
+
+			<div class="single-product page">
+
+				<div class="overlay"></div>
+
+				<div class="preview-large">
+					<h3>Producto</h3>
+					<img src="" />
+					<p></p>
+
+					<span class="close">×</span>
+				</div>
 
 			</div>
-		</section>
 
-		<div class="single-product page">
-
-			<div class="overlay"></div>
-
-			<div class="preview-large">
-				<h3>Producto</h3>
-				<img src="" />
-				<p></p>
-
-				<span class="close">×</span>
+			<div class="error page">
+				<h3>Lo siento profe, algo salio mal :(</h3>
 			</div>
 
 		</div>
 
-		<div class="error page">
-			<h3>Lo siento profe, algo salio mal :(</h3>
-		</div>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
+		<script src="assets/js/script.js"></script>
 
 	</div>
-
-
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
-	<script src="assets/js/script.js"></script>
-
-</div>
 </body>
+<footer>
+	<p>Copyright &copy; 2017, Luis.E</p>
+</footer>
+<script>
+$(document).ready(
+    function() {
+        $("#login").click(function() {
+            $("#logininfo").fadeToggle();
+        });
+    });
+</script>
 
 </html>
