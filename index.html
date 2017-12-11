@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta charset="utf-8">
 
-	<title>Single Page App Without A Framework</title>
+	<title>Examen Luis Estanislao</title>
 
 	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet">
 	<link href="assets/css/styles.css" rel="stylesheet">
@@ -14,8 +14,8 @@
 <body>
 
 	<header class="compact">
-		<h2 class="tzine"><a href="http://tutorialzine.com/2015/02/single-page-app-without-a-framework/">Back to article</a></h2>
-		<h1><a href="#">Single Page App Without A Framework</a></h1>
+		<h2 class="tzine"><a href="">Login</a></h2>
+		<h1><a href="#">Empresa Latias S.A</a></h1>
 	</header>
 
 	<div class="main-content">
@@ -26,37 +26,17 @@
 				<form>
 
 					<div class="filter-criteria">
-						<span>Manufacturer</span>
-						<label><input type="checkbox" name="manufacturer" value="apple">Apple</label>
-						<label><input type="checkbox" name="manufacturer" value="samsung">Samsung</label>
-						<label><input type="checkbox" name="manufacturer" value="htc">HTC</label>
-						<label><input type="checkbox" name="manufacturer" value="nokia">Nokia</label>
-						<label><input type="checkbox" name="manufacturer" value="zte">ZTE</label>
-						<label><input type="checkbox" name="manufacturer" value="sony">Sony</label>
+						<span>Comida</span>
+						<label><input type="checkbox" name="comida" value="apple">Apple</label>
+						
 					</div>
 
 					<div class="filter-criteria">
-						<span>Screen Size</span>
-						<label><input type="checkbox" value="16" name="storage">16 GB</label>
-						<label><input type="checkbox" value="32" name="storage">32 GB</label>
+						<span>Equipo</span>
+						<label><input type="checkbox" value="16" name="equipo">16 GB</label>
+						
 					</div>
-
-					<div class="filter-criteria">
-						<span>OS</span>
-						<label><input type="checkbox" value="android" name="os">Android</label>
-						<label><input type="checkbox" value="ios" name="os">iOS</label>
-						<label><input type="checkbox" value="windows" name="os">Windows</label>
-					</div>
-
-					<div class="filter-criteria">
-						<span>Camera</span>
-						<label><input type="checkbox" value="5" name="camera">5 Mpx</label>
-						<label><input type="checkbox" value="8" name="camera">8 Mpx</label>
-						<label><input type="checkbox" value="12" name="camera">12 Mpx</label>
-						<label><input type="checkbox" value="15" name="camera">15 Mpx</label>
-					</div>
-
-					<button>Clear filters</button>
+					<button>Limpiar filtros</button>
 
 				</form>
 
@@ -69,12 +49,10 @@
 							<a href="#" class="product-photo"><img src="{{image.small}}" height="130" alt="{{name}}"/></a>
 							<h2><a href="#"> {{name}} </a></h2>
 							<ul class="product-description">
-								<li><span>Manufacturer: </span>{{specs.manufacturer}}</li>
-								<li><span>Storage: </span>{{specs.storage}} GB</li>
-								<li><span>OS: </span>{{specs.os}}</li>
-								<li><span>Camera: </span>{{specs.camera}} Mpx</li>
+								<li><span>comida: </span>{{specs.comida}}</li>
+								<li><span>equipo: </span>{{specs.equipo}}</li>
 							</ul>
-							<button>Buy Now!</button>
+							<button>Comprar</button>
 							<p class="product-price">{{price}}$</p>
 							<div class="highlight"></div>
 						</li>
@@ -90,7 +68,7 @@
 			<div class="overlay"></div>
 
 			<div class="preview-large">
-				<h3>Single product view</h3>
+				<h3>Producto</h3>
 				<img src=""/>
 				<p></p>
 
@@ -100,7 +78,7 @@
 		</div>
 
 		<div class="error page">
-			<h3>Sorry, something went wrong :(</h3>
+			<h3>Lo siento profe, algo salio mal :(</h3>
 		</div>
 
 	</div>

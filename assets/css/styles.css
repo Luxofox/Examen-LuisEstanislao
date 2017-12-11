@@ -11,10 +11,6 @@ h1, h3{
 	font: normal 24px 'Open Sans', Arial, Helvetica, sans-serif;
 }
 
-/*-----------------
-	The Header
-------------------*/
-
 header {
 	position: fixed;
 	top: 0;
@@ -67,11 +63,6 @@ header h2.tzine a{
 
 }
 
-/*-----------------
-	Main Content
-------------------*/
-
-
 .main-content{
 	box-sizing: border-box;
 	text-align: center;
@@ -94,12 +85,6 @@ header h2.tzine a{
 
 }
 
-
-/*-------------------
-	All Products Page
---------------------*/
-
-/*	Filter Form	*/
 
 .filters{
 	box-sizing: border-box;
@@ -155,8 +140,6 @@ header h2.tzine a{
 }
 
 
-/*	Products List	*/
-
 .all-products h3{
 	opacity: 0;
 }
@@ -203,8 +186,6 @@ header h2.tzine a{
 	pointer-events: none;
 }
 
-/* The product image */
-
 .products-list .product-photo{
 	display: block;
 	text-align: center;
@@ -215,8 +196,6 @@ header h2.tzine a{
 	padding: 20px 0;
 	box-sizing: border-box;
 }
-
-/* The product name */
 
 .products-list h2{
 	display: block;
@@ -232,8 +211,6 @@ header h2.tzine a{
 	text-decoration: none;
 	color: #2B2E31;
 }
-
-/* Product description */
 
 .products-list .product-description{
 	margin-top: 20px;
@@ -261,8 +238,6 @@ header h2.tzine a{
 .products-list .product-description li span{
 	font-weight: bold;
 }
-
-/* Price and order button */
 
 .products-list button{
 	border-radius: 2px;
@@ -304,8 +279,6 @@ header h2.tzine a{
 	opacity: 1;
 }
 
-/* Making the list responsive */
-
 @media (max-width: 800px){
 
 	.products-list .product-photo{
@@ -316,11 +289,6 @@ header h2.tzine a{
 		max-width: 225px;
 	}
 }
-
-
-/*---------------------------
-	Single Product Page
-----------------------------*/
 
 .single-product{
 	z-index: 100;
@@ -392,11 +360,6 @@ header h2.tzine a{
 	color: #555;
 	cursor: pointer;
 }
-
-
-/*---------------------------
-	Error Page
-----------------------------*/
 
 .error{
 	opacity: 0;

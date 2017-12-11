@@ -1,138 +1,115 @@
 [
   {
     "id": 1,
-    "name": "Sony Xperia Z3",
-    "price": 899,
+    "name": "Arbol",
+    "price": 5000,
     "specs": {
-      "manufacturer": "Sony",
-      "storage": 16,
-      "os": "Android",
-      "camera": 15
+      "equipo": "equipo"
     },
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique ipsum in efficitur pharetra. Maecenas luctus ante in neque maximus, sed viverra sem posuere. Vestibulum lectus nisi, laoreet vel suscipit nec, feugiat at odio. Etiam eget tellus arcu.",
+
+    "description": "Arbol para gatos, con 2 bolas colgantes",
     "rating": 4,
     "image": {
-      "small": "assets/images/sony-xperia-z3.jpg",
-      "large": "assets/images/sony-xperia-z3-large.jpg"
+      "small": "assets/images/arboles2.png",
+      "large": "assets/images/arboles2.png"
     }
   },
   {
     "id": 2,
-    "name": "Iphone 6",
-    "price": 899,
+    "name": "Kit",
+    "price": 20000,
     "specs": {
-      "manufacturer": "Apple",
-      "storage": 16,
-      "os": "iOS",
-      "camera": 8
+      "equipo": "equipo"
     },
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique ipsum in efficitur pharetra. Maecenas luctus ante in neque maximus, sed viverra sem posuere. Vestibulum lectus nisi, laoreet vel suscipit nec, feugiat at odio. Etiam eget tellus arcu.",
+    "description": "Kit de articulos para gatos",
     "rating": 4,
     "image": {
-      "small": "assets/images/iphone6.jpg",
-      "large": "assets/images/iphone6-large.jpg"
+      "small": "assets/images/kit.png",
+      "large": "assets/images/kit.png"
     }
   },
   {
     "id": 3,
-    "name": "HTC One M8",
-    "price": 899,
+    "name": "Parque para gatos 1",
+    "price": 15000,
     "specs": {
-      "manufacturer": "HTC",
-      "storage": 32,
-      "os": "Android",
-      "camera": 5
+      "equipo": "equipo"
     },
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique ipsum in efficitur pharetra. Maecenas luctus ante in neque maximus, sed viverra sem posuere. Vestibulum lectus nisi, laoreet vel suscipit nec, feugiat at odio. Etiam eget tellus arcu.",
+    "description": "Parque para gatos, con varios articulos",
     "rating": 4,
     "image": {
-      "small": "assets/images/htc-one.jpg",
-      "large": "assets/images/htc-one-large.jpg"
+      "small": "assets/images/parque1.png",
+      "large": "assets/images/parque1.png"
     }
   },
   {
     "id": 4,
-    "name": "Galaxy Alpha",
-    "price": 899,
+    "name": "Parque para gatos 2",
+    "price": 15000,
     "specs": {
-      "manufacturer": "Samsung",
-      "storage": 32,
-      "os": "Android",
-      "camera": 12
+      "equipo": "equipo"
     },
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique ipsum in efficitur pharetra. Maecenas luctus ante in neque maximus, sed viverra sem posuere. Vestibulum lectus nisi, laoreet vel suscipit nec, feugiat at odio. Etiam eget tellus arcu.",
+    "description": "Parque para gatos, con torre con bola colgante.",
     "rating": 4,
     "image": {
-      "small": "assets/images/galaxy-alpha.jpg",
-      "large": "assets/images/galaxy-alpha-large.jpg"
+      "small": "assets/images/parque2.png",
+      "large": "assets/images/parque.png"
     }
   },
   {
     "id": 5,
-    "name": "Nokia Lumia",
-    "price": 450,
+    "name": "Comida Cat",
+    "price": 4500,
     "specs": {
-      "manufacturer": "Nokia",
-      "storage": 16,
-      "os": "Windows",
-      "camera": 5
+      "comida": "comida"
     },
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique ipsum in efficitur pharetra. Maecenas luctus ante in neque maximus, sed viverra sem posuere. Vestibulum lectus nisi, laoreet vel suscipit nec, feugiat at odio. Etiam eget tellus arcu.",
+    "description": "Comida para gatos marca Cat.",
     "rating": 4,
     "image": {
-      "small": "assets/images/nokia-lumia.jpg",
-      "large": "assets/images/nokia-lumia-large.jpg"
+      "small": "assets/images/cat.png",
+      "large": "assets/images/cat.png"
     }
   },
   {
     "id": 6,
-    "name": "Zte Nubia",
-    "price": 399,
+    "name": "Comida Equilibrio",
+    "price": 5000,
     "specs": {
-      "manufacturer": "ZTE",
-      "storage": 32,
-      "os": "Android",
-      "camera": 12
+      "comida": "comida"
     },
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique ipsum in efficitur pharetra. Maecenas luctus ante in neque maximus, sed viverra sem posuere. Vestibulum lectus nisi, laoreet vel suscipit nec, feugiat at odio. Etiam eget tellus arcu.",
+    "description": "Comida para gatos equilibrio",
     "rating": 4,
     "image": {
-      "small": "assets/images/zte-nubia.jpg",
-      "large": "assets/images/zte-nubia-large.jpg"
+      "small": "assets/images/equilibrio.png",
+      "large": "assets/images/equilibrio.png"
     }
   },
   {
     "id": 7,
-    "name": "Samsung Galaxy S5",
-    "price": 399,
+    "name": "Comida para gatos Science Diet",
+    "price": 6000,
     "specs": {
-      "manufacturer": "Samsung",
-      "storage": 16,
-      "os": "Android",
-      "camera": 15
+      "comida": "comida"
     },
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique ipsum in efficitur pharetra. Maecenas luctus ante in neque maximus, sed viverra sem posuere. Vestibulum lectus nisi, laoreet vel suscipit nec, feugiat at odio. Etiam eget tellus arcu.",
+    "description": "Comida para gatos marca ScienceDiet.",
     "rating": 4,
     "image": {
-      "small": "assets/images/galaxy-s5.jpg",
-      "large": "assets/images/galaxy-s5-large.jpg"
+      "small": "assets/images/sciencediet.png",
+      "large": "assets/images/sciencediet.png"
     }
   },
   {
     "id": 8,
-    "name": "Iphone 5S",
-    "price": 399,
+    "name": "Comida para gatos Whiskas",
+    "price": 6500,
     "specs": {
-      "manufacturer": "Apple",
-      "storage": 16,
-      "os": "iOS",
-      "camera": 8
+      "comida": "comida"
     },
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique ipsum in efficitur pharetra. Maecenas luctus ante in neque maximus, sed viverra sem posuere. Vestibulum lectus nisi, laoreet vel suscipit nec, feugiat at odio. Etiam eget tellus arcu.",
+    "description": "Comida para gatos marca Whiskas.",
     "rating": 4,
     "image": {
-      "small": "assets/images/iphone5s.jpg",
-      "large": "assets/images/iphone5s-large.jpg"
+      "small": "assets/images/whiskas.png",
+      "large": "assets/images/whiskas.png"
     }
   }
 ]
