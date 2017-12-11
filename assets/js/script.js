@@ -114,9 +114,6 @@ $(function () {
 		if (map[temp]) {
 			map[temp]();
 		}
-		else {
-			renderErrorPage();
-		}
 
 	}
 
