@@ -10,6 +10,41 @@
 
 	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet">
 	<link href="assets/css/styles.css" rel="stylesheet">
+
+
+
+<script>
+$("#modal_trigger").leanModal({
+		top: 100,
+		overlay: 0.6,
+		closeButton: ".modal_close"
+});
+
+$(function() {
+		$("#login_form").click(function() {
+				$(".social_login").hide();
+				$(".user_login").show();
+				return false;
+		});
+
+		$("#register_form").click(function() {
+				$(".social_login").hide();
+				$(".user_register").show();
+				$(".header_title").text('Register');
+				return false;
+		});
+
+		$(".back_btn").click(function() {
+				$(".user_login").hide();
+				$(".user_register").hide();
+				$(".social_login").show();
+				$(".header_title").text('Login');
+				return false;
+		});
+});
+
+</script>
+
 </head>
 
 
@@ -17,36 +52,145 @@
 	<div>
 		<header class="compact">
 			<h2 class="tzine">
-				<div id="login"><a href="#">Login</a></div>
+				<a id="modal_trigger" href="#modal" class="btn">Login</a>
 			</h2>
 			<h1>
 				<a href="#">Empresa Latias S.A</a>
 			</h1>
 		</header>
 
-		<div id="logininfo">
-			
-			<h1>asdasdasdasdasdasdadsa</h1>
-			<p> comprobando que funciona login.</p>
+		<div class="container">
 
+			<div id="modal" class="popupContainer" style="display:none;">
+				<header class="popupHeader">
+					<span class="header_title">Login</span>
+					<span class="modal_close">
+						<i class="fa fa-times"></i>
+					</span>
+				</header>
+
+				<section class="popupBody">
+
+					<div class="action_btns">
+						<div class="one_half">
+							<a href="#" id="login_form" class="btn">Login</a>
+						</div>
+						<div class="one_half last">
+							<a href="#" id="register_form" class="btn">Sign up</a>
+						</div>
+					</div>
+			</div>
+
+			<div class="user_login">
+				<form>
+					<label>Email / Username</label>
+					<input type="text" />
+					<br />
+
+					<label>Password</label>
+					<input type="password" />
+					<br />
+
+					<div class="checkbox">
+						<input id="remember" type="checkbox" />
+						<label for="remember">Recordarme</label>
+					</div>
+
+					<div class="action_btns">
+						<div class="one_half">
+							<a href="#" class="btn back_btn">
+								<i class="fa fa-angle-double-left"></i> Volver</a>
+						</div>
+						<div class="one_half last">
+							<a href="#" class="btn btn_red">Login</a>
+						</div>
+					</div>
+				</form>
+
+				<a href="#" class="forgot_password">Forgot password?</a>
+			</div>
+
+			<div class="user_register">
+				<form>
+					<label>Nombre completo</label>
+					<input type="text" />
+					<br />
+
+					<label>Email</label>
+					<input type="email" />
+					<br />
+
+					<label>Contraseña</label>
+					<input type="password" />
+					<br />
+
+					<div class="action_btns">
+						<div class="one_half">
+							<a href="#" class="btn back_btn">
+								<i class="fa fa-angle-double-left"></i> Volver</a>
+						</div>
+						<div class="one_half last">
+							<a href="#" class="btn btn_red">Registrar</a>
+						</div>
+					</div>
+				</form>
+			</div>
+			</section>
 		</div>
+	</div>
 
 
-		<div class="main-content">
-			<nav>
-				<ul>
-					<li>
-						<a href="#final">Ir al final de la pagina</a>
-					</li>
-				</ul>
-			</nav>
 
-			<section>
-				<div class="all-products page">
 
-					<main>
-						<ul class="products-list">
-							<script id="products-template" type="x-handlebars-template">​
+
+
+
+	<div id="logininfo" class="logininfo">
+		<h1>asdasdasdasdasdasdadsa</h1>
+		<p> comprobando que funciona login.</p>
+
+	</div>
+
+
+	<div class="main-content">
+		<nav>
+			<ul>
+				<li>
+					<a href="#final">Ir al final de la pagina</a>
+				</li>
+			</ul>
+		</nav>
+
+			<div class="all-products page">
+
+				<!--
+					<div class="filters">
+						<form>
+
+							<div class="filter-criteria">
+								<span>Comida</span>
+								<label>
+									<input type="checkbox" name="comida" value="comida">Comida</label>
+
+							</div>
+
+							<div class="filter-criteria">
+								<span>Equipo</span>
+								<label>
+									<input type="checkbox" value="equipo" name="equipo">Equipo</label>
+
+							</div>
+							<button>Limpiar filtros</button>
+
+						</form>
+
+					</div>
+
+					 -->
+
+				<main>
+					<ul class="products-list">
+						<script id="products-template" type="x-handlebars-template">​
 					{{#each this}}
 						<li data-index="{{id}}">
 							<a href="#" class="product-photo"><img src="{{image.small}}" height="130" alt="{{name}}"/></a>
@@ -61,49 +205,40 @@
 						</li>
 					{{/each}}
 				</script>
-					</main>
-					</ul>
-
-				</div>
-			</section>
-
-			<div class="single-product page">
-
-				<div class="overlay"></div>
-
-				<div class="preview-large">
-					<h3>Producto</h3>
-					<img src="" />
-					<p></p>
-
-					<span class="close">×</span>
-				</div>
+				</main>
+				</ul>
 
 			</div>
 
-			<div class="error page">
-				<h3>Lo siento profe, algo salio mal :(</h3>
+		<div class="single-product page">
+
+			<div class="overlay"></div>
+
+			<div class="preview-large">
+				<h3>Producto</h3>
+				<img src="" />
+				<p></p>
+
+				<span class="close">×</span>
 			</div>
 
 		</div>
 
+		<div class="error page">
+			<h3>Lo siento profe, algo salio mal :(</h3>
+		</div>
 
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
-		<script src="assets/js/script.js"></script>
+	</div>
+
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
+	<script src="assets/js/script.js"></script>
 
 	</div>
 </body>
 <footer>
 	<p id="final">Copyright &copy; 2017, Luis.E</p>
 </footer>
-<script>
-$(document).ready(
-    function() {
-        $("#login").click(function() {
-            $("#logininfo").fadeToggle();
-        });
-    });
-</script>
 
 </html>
