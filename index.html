@@ -12,39 +12,6 @@
 	<link href="assets/css/styles.css" rel="stylesheet">
 
 
-
-<script>
-$("#modal_trigger").leanModal({
-		top: 100,
-		overlay: 0.6,
-		closeButton: ".modal_close"
-});
-
-$(function() {
-		$("#login_form").click(function() {
-				$(".social_login").hide();
-				$(".user_login").show();
-				return false;
-		});
-
-		$("#register_form").click(function() {
-				$(".social_login").hide();
-				$(".user_register").show();
-				$(".header_title").text('Register');
-				return false;
-		});
-
-		$(".back_btn").click(function() {
-				$(".user_login").hide();
-				$(".user_register").hide();
-				$(".social_login").show();
-				$(".header_title").text('Login');
-				return false;
-		});
-});
-
-</script>
-
 </head>
 
 
@@ -52,7 +19,7 @@ $(function() {
 	<div>
 		<header class="compact">
 			<h2 class="tzine">
-				<a id="modal_trigger" href="#modal" class="btn">Login</a>
+
 			</h2>
 			<h1>
 				<a href="#">Empresa Latias S.A</a>
@@ -60,7 +27,7 @@ $(function() {
 		</header>
 
 		<div class="container">
-
+			<a id="modal_trigger" href="#modal" class="btn">Login</a>
 			<div id="modal" class="popupContainer" style="display:none;">
 				<header class="popupHeader">
 					<span class="header_title">Login</span>
@@ -139,31 +106,18 @@ $(function() {
 		</div>
 	</div>
 
-
-
-
-
-
-
-	<div id="logininfo" class="logininfo">
-		<h1>asdasdasdasdasdasdadsa</h1>
-		<p> comprobando que funciona login.</p>
-
-	</div>
-
-
 	<div class="main-content">
 		<nav>
 			<ul>
 				<li>
-					<a href="#final">Ir al final de la pagina</a>
+					<a href="#">Este es el nav bar</a>
 				</li>
 			</ul>
 		</nav>
 
-			<div class="all-products page">
+		<div class="all-products page">
 
-				<!--
+			<!--
 					<div class="filters">
 						<form>
 
@@ -188,9 +142,9 @@ $(function() {
 
 					 -->
 
-				<main>
-					<ul class="products-list">
-						<script id="products-template" type="x-handlebars-template">​
+			<main>
+				<ul class="products-list">
+					<script id="products-template" type="x-handlebars-template">​
 					{{#each this}}
 						<li data-index="{{id}}">
 							<a href="#" class="product-photo"><img src="{{image.small}}" height="130" alt="{{name}}"/></a>
@@ -205,10 +159,10 @@ $(function() {
 						</li>
 					{{/each}}
 				</script>
-				</main>
-				</ul>
+			</main>
+			</ul>
 
-			</div>
+		</div>
 
 		<div class="single-product page">
 
@@ -234,6 +188,7 @@ $(function() {
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
 	<script src="assets/js/script.js"></script>
+	<script src="assets/js/scriptlogin.js>"></script>
 
 	</div>
 </body>
